@@ -1,0 +1,2 @@
+
+### This folder ("Resources") will be where we include any imgs or things of that nature. 

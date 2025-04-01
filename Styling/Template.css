@@ -1,0 +1,66 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------------
+                                                        Template File for CSS
+-------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* GENERAL INFORMATION CSS */ /*
+    - CSS is a stylesheet that is used to format, style, resize, etc... elements and components on a page
+        - For example: Lets say you have a reoccuring element (Like your Header, which is often a Nav (Navigation bar - used to navigate a website)
+         or something like a footer which may include links to important sources, your copywright etc...). You can use css to style these reoccuring
+         elements or components. So lets say we want the Nav Bar to always be a certain Red. Instead of messily adding it into an inline style 
+         (Styling that is put into the html or php file with the UI component) css, you can add it into a CSS file and use it over and over again.
+    
+    - So if it is unclear as to why css is useful from the example above, think if you had 10 different things you wanted to edit on a component 
+    (Like the color, the font family, the font sizing, the margins, the padding between things on that component, etc... you could end up with a 
+    long anf jumbled inline style css on your file. So instead you do the styling in a css and use those attributes you created instead of typing it
+    all in and making the code less readable. Also think, if this is a reoccuring element you are using you would have to type all the inline style
+    css over and over but this way u only have to type your attribute in and its all added.
+
+    - Some Minor things I think should also be mentioned :
+
+        - the CSS file is referenced in the header of a html (Or php file) so that is essentially an "include or using" reference. As long as the
+        file you want to use css attributes on is referenced you can use those attributes in your components. 
+
+        - Inline styling will take priority over over any css attributes if you run into issues this is a good first place to debug syntax issues. 
+
+*/ /* The following will be an example of what CSS files may look like. (Remember there a ton of different things you can modify. */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Example #1: This will be an Example of a red navbar in MSU colors */
+.navbar-red
+{
+    background-color: #990000;
+    color: #ffffff;
+    color: rgb(255, 255, 255);
+    color: white;
+
+    /* So above I am making a Navbar background color the Montclair Red, well also setting the front color (Fonts) to pure white.
+    I used hexcodes here (#ffffff) at first but you can also use things like color: white, or color: rgb(255, 255, 255) which I also included. */
+}
+
+/* Example #2: so lets say you want ur links (Page buttons) on your nav bar to react when hovered over. */
+.nav-link:hover                           /* This css will happen when a mouse is hovering over links on your navbar */
+{
+  color:black !important;               /* Simple value for color: as show in Ex#1, but the !important tag -> makes this value have more 
+                                          importance then normal and will override previous styling on this element. */
+
+  font-weight: bolder !important;         /* Makes the font weight bold */
+  transition: 0.3s;                       /* This is the transition time for the hover affect */
+}
+
+/* Example #3: This is an example of a styled box, like for a "Welcome" or "Introduction" section. */
+
+.Introduction-Box 
+{
+    background-color: #990000;       /* Sets the background to Montclair Red, just like in the navbar. */
+    color: #ffffff;                  /* Text inside the box will be pure white. */
+    width: 80%;                        /* The box will take up 80% of the screen width (centered if you add margin:auto). */
+    border-radius: 10px;               /* This makes the box corners slightly rounded for a smoother look. */
+    
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);  /* Adds a subtle shadow to the box, giving it a 3D "popped out" effect. 
+                                                    rgba lets you set transparency (0.4 = 40% opaque shadow). */
+    
+    height: 200px;                      /* Fixed height of the box — you can adjust this if your content is taller/shorter. */
+    padding-top: 50px;                  /* Adds spacing *inside* the top of the box, so your text isn’t jammed against the edge. */
+}
+
