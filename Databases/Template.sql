@@ -9,4 +9,14 @@ CREATE TABLE Users (
     user_type ENUM('employee', 'member') NOT NULL
 );
 
-CREATE TABLE Employee  
+CREATE TABLE Employee (
+employee_ssn INT PRIMARY KEY,
+user_id INT NOT NULL,
+position VARCHAR(50),
+salary DECIMAL(10,2),
+address VARCHAR(100),
+
+FOREIGN KEY (user_id) REFERENCES Users(user_id)
+
+
+);
