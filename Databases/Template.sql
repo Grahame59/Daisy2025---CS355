@@ -6,7 +6,7 @@ CREATE TABLE Users (
     username VARCHAR(50) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    user_type ENUM('employee', 'member', 'supervisor','HRmanagement') NOT NULL
+    user_type ENUM('employee', 'member', 'supervisor') NOT NULL
 );
 
 CREATE TABLE Employee (
