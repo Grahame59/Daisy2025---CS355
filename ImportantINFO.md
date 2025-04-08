@@ -2,7 +2,7 @@
     
     - It will include general information on each language we are using to help your learning curve as well as other associated information to our project.
 
-## ---------------------------------------------------------------------------------------------------------------------------------------------
+## ----------------------------------------------------------------------------------------------
 ### There is a Template file for each of the primary languages we will be using primarily as well.
 
 #### GIT
@@ -43,4 +43,4 @@
 
     - We probably won't end up using much JS (JavaScript) so I didn't include a Template file for it. As well as html we most likely will not be outwardly making html files as they are static... For html syntax/code refer to the PHP Template as it has plenty of html code and structure in it. 
 
-## ---------------------------------------------------------------------------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------------------
