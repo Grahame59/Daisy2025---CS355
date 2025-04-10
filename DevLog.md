@@ -37,5 +37,6 @@
             | 23  | ProductManagement     | Admin Product Changes Log             |
             -----------------------------------------------------------------------
 
-### 04.00.2025 - 00:00 ()
-    - 
+### 04.09.2025 - 11:22 (Kyler)
+    - I added the Insert Statements to put Member Types and SupervisorTypes into their respective tables (Member Table & Supervisor Table) and Tanvir did the Insert Statements for Employee Table from Account Type Employee. All of these reference the Account table through UserID.
+    
