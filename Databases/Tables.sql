@@ -242,6 +242,9 @@ CREATE TABLE ProductManagement
   FOREIGN KEY (ChangedBy) REFERENCES Account(UserID)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- Create Statement For Warehouse
+
+
 -- Create Statement For EmployeeDepartments Linking Table
 CREATE TABLE EmployeeDepartments 
 (
@@ -261,5 +264,4 @@ CREATE TABLE SupervisorDepartments
   FOREIGN KEY (SupervisorID) REFERENCES Supervisor(SupervisorID),
   FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 

@@ -172,3 +172,12 @@ VALUES
   (3, 1),  -- David Cho -> Marketing
   (4, 5),  -- Michael Bloom -> Product Management
   (5, 3);  -- Chloe Reed -> Customer Service
+
+-- Altering Tables for SQL Queries
+
+ALTER TABLE Employee 
+ADD StartDate DEFAULT '2000-01-01' DATE NOT NULL;
+
+ALTER TABLE Supervisor
+ADD StartDate DEFAULT '2000-01-01' DATE NOT NULL;
+
