@@ -49,7 +49,8 @@
         $num_results = $result->num_rows;
         echo "<p>Number of products found: $num_results</p>";
 
-        if ($num_results > 0) {
+        if ($num_results > 0) 
+        {
             while ($row = $result->fetch_assoc()) 
             {
                 echo "<div style = 'margin-bottom: 20px;'>";

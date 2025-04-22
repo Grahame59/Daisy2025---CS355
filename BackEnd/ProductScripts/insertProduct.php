@@ -53,7 +53,7 @@
 
         if (!$stmt) 
         {
-            echo "❗ SQL error: " . $db->error;
+            echo "SQL error: " . $db->error;
             exit;
         }
 
