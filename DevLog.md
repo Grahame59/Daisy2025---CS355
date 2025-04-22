@@ -40,3 +40,40 @@
 ### 04.09.2025 - 11:22 (Kyler)
     - I added the Insert Statements to put Member Types and SupervisorTypes into their respective tables (Member Table & Supervisor Table) and Tanvir did the Insert Statements for Employee Table from Account Type Employee. All of these reference the Account table through UserID.
     
+### 04.21.2025 - 10:58 PM (Kyler)
+    - I added the searchProduct and insert Product scripts from HW 5.3, I am working through the CRUD (Create. Read. Update. Delete) scipting for now. So for example this would mean scripts for Creating products (insertProduct.php) or reading a product (searchProduct.php). Basically I am starting work on the scripts for employee, supervisor and owner views. Where Employees can read (-R) data and maybe write (-W) in data to the DB relevant to their department. Supervisors can -RW data in their department and -R data in all departments. Owner has all prvileges. I also can import login, registration and log out scripts from another project I did for Software Eng II to save some time and refactor them a little. 
+
+    - This below is a Current Idea of how I think we should implement the RBAC (Role Based Access Control) for the views of the Website / DB access
+         
+        -> Login Script:
+            1. Takes username + password
+            2. Verifies against the Account table
+            3. Grabs the AccountType ENUM
+
+        -> Post-Login Routing Logic:
+            1. If Guest: basic access only
+            2. If Member: redirect to member dashboard (personal info, POS, Daisy wiki)
+            3. If Employee / Supervisor:
+                3.1 Query EmployeeDepartments or SupervisorDepartments
+                3.2 Build list of departments they belong to
+                3.4 Show/hide functionality based on this list
+            4. If Owner: unrestricted access
+
+    _________________________________________________________________________________
+    |    Role	     |  Access Scope                                                |
+    |----------------|--------------------------------------------------------------|
+    |    Guest	     |  View wiki + POS browse only                                 |
+    |----------------|--------------------------------------------------------------|
+    |    Member	     |  View/edit own account info, shop using POS                  |
+    |----------------|--------------------------------------------------------------|
+    |    Employee    |	View/edit product data only in their departments            |
+    |----------------|--------------------------------------------------------------|
+    |    Supervisor  |	All Employee rights + manage employees in their departments,|
+    |                |  view other depts (read-only)                                |
+    |----------------|--------------------------------------------------------------|
+    |    Owner	     |  View/edit everything (accounts, products, depts,            |  
+    |                |  promotions,   etc.)                                         |
+    |________________|______________________________________________________________|
+
+### 04.2 .2024 - 00:00 (placeholder)
+    - 

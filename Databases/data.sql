@@ -181,3 +181,15 @@ ADD StartDate DEFAULT '2000-01-01' DATE NOT NULL;
 ALTER TABLE Supervisor
 ADD StartDate DEFAULT '2000-01-01' DATE NOT NULL;
 
+-----
+
+--- Added some more products to the DB (Did this to hit the 30 product requirement for PHP HW 5.3 (Insert and Select))
+INSERT INTO Products (ProductName, Category, TotalInventory, CostPrice, RetailPrice, Review, SupplierID, Descript, NULL)
+VALUES
+('Morning Dew Body Spray'          , 'Wellness'   , 10, 7.99, 21.99, NULL, 1, 'Refreshing Body Spray infused with natural daisy essence to provide a wonderful body scent.', NULL),
+('Eco-Friendly Zen Backpack'       , 'Accessories', 10, 5.95, 19.99, NULL, 4, 'Durable and stylish canvas bag, perfect for groceries, day trips, or everyday use. Zen-Daisy print design.', NULL),
+('Zen Garden Incense Starter Kit'  , 'Home'       , 10, 3.99, 14.99, NULL, 2, 'Includes incense sticks, ceramic holder, and sand tray. Designed to bring a calming daisy-scented atmosphere to any space.', NULL);
+
+--- Also added an alter to the Products table because we altered it through phpMyAdmin GUI and wnated it in the SQL for our project
+ALTER TABLE Products
+ADD COLUMN image_path VARCHAR(100) AFTER Descript;
